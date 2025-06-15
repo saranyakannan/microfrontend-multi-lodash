@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Host App</title>
+  <link rel="icon" href="data:;base64,=" />
+  <!-- Import Map for both lodash versions -->
+  <script type="importmap">
+    {
+      "imports": {
+        "lodash17": "https://cdn.skypack.dev/lodash@4.17.21",
+        "lodash16": "https://cdn.skypack.dev/lodash@4.16.6"
+      }
+    }
+  </script>
+  <script type="module">
+    import lodash17 from 'lodash17';
+    import lodash16 from 'lodash16';
+    
+    window.lodash17 = lodash17; 
+    window.lodash16 = lodash16;
+    
+    console.log('Lodash 4.17 loaded globally:', lodash17.VERSION);
+    console.log('Lodash 4.16 loaded globally:', lodash16.VERSION);
+  </script>
+</head>
+<body>
+  <div id="root"></div>
+</body>
+</html>
